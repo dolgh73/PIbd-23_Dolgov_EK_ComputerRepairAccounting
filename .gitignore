@@ -486,3 +486,8 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
+
+# Compiled files must not be committed
+*.exe
+*.dll
+*.bin
