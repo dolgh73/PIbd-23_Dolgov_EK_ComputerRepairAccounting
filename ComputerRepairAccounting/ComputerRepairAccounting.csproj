@@ -1,5 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
@@ -7,5 +6,63 @@
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
+  <ItemGroup>
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Forms\ComponentReceipts\ComponentReceiptEditForm.Designer.cs">
+      <DependentUpon>ComponentReceiptEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\ComponentReceipts\ComponentReceiptListForm.Designer.cs">
+      <DependentUpon>ComponentReceiptListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\ComponentReceipts\ComponentReceiptListForm.resx">
+      <DependentUpon>ComponentReceiptListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\Components\ComponentEditForm.Designer.cs">
+      <DependentUpon>ComponentEditForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\Components\ComponentEditForm.resx">
+      <DependentUpon>ComponentEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\Components\ComponentListForm.Designer.cs">
+      <DependentUpon>ComponentListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\Components\ComponentListForm.resx">
+      <DependentUpon>ComponentListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\DevicePlacements\DevicePlacementEditForm.Designer.cs">
+      <DependentUpon>DevicePlacementEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\DevicePlacements\DevicePlacementListForm.Designer.cs">
+      <DependentUpon>DevicePlacementListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\DevicePlacements\DevicePlacementListForm.resx">
+      <DependentUpon>DevicePlacementListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\Masters\MasterEditForm.Designer.cs">
+      <DependentUpon>MasterEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\Masters\MasterListForm.Designer.cs">
+      <DependentUpon>MasterListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\Repairs\RepairEditForm.Designer.cs">
+      <DependentUpon>RepairEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\Repairs\RepairListForm.Designer.cs">
+      <DependentUpon>RepairListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\Repairs\RepairListForm.resx">
+      <DependentUpon>RepairListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\Warehouses\WarehouseEditForm.Designer.cs">
+      <DependentUpon>WarehouseEditForm.cs</DependentUpon>
+    </Compile>
+    <Compile Update="Forms\Warehouses\WarehouseListForm.Designer.cs">
+      <DependentUpon>WarehouseListForm.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Remove="Forms\Controls\EditorForm.resx" />
+  </ItemGroup>
 </Project>
